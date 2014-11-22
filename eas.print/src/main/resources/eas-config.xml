@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+ 	<!-- 定时要调用的工作类 -->
+<!--	<bean id="mainTimerJob" class="com.laoyasoft.eas.task.MainTimerTask"
+		lazy-init="true">
+	</bean>
+
+	定义调用对象和调用对象的方法
+	<bean id="mainTimerJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="mainTimerJob" />
+		<property name="targetMethod" value="doTask" />
+		设置false为不并发
+		<property name="concurrent" value="false" />
+	</bean>
+
+	定义触发时间
+	<bean id="mainTimerCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="mainTimerJobDetail" />
+		每10秒钟调度一次
+		<property name="cronExpression" value="0/10 * * * * ?" />
+	</bean>
+
+	总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序
+	<bean id="startQuertz" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="mainTimerCronTrigger" />
+			</list>
+		</property>
+	</bean> -->
+</beans>

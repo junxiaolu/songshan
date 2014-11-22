@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>样本报价单</title>
+	<link rel="stylesheet" type="text/css"
+		href="/eas/themes/app/print/default/css/base.css">
+		<link rel="stylesheet" type="text/css"
+			href="/eas/themes/app/print/default/css/print.css">
+</head>
+<body>
+	<form name="form1" method="post" action="autoPrice" id="form1">
+		<div class="ppricelist" style="width: 99%">
+			<h1 class="ct1">样本报价单</h1>
+			<table width="94%" cellpadding="0" cellspacing="1" class="pricebox">
+				<tbody>
+					<tr>
+						<th width="13%">印品类型：</th>
+						<th width="20%" style="text-align: left; padding-left: 5px;">样本印刷</th>
+						<th width="13%">印刷数量：</th>
+						<th width="20%" style="text-align: left; padding-left: 5px;">
+							1000</th>
+						<th width="13%">报价时间：</th>
+						<th width="20%" style="text-align: left; padding-left: 5px">
+							2014-7-7</th>
+					</tr>
+					<tr>
+						<th align="right">工艺要求：</th>
+						<td colspan="5">
+							<table width="100%" cellspacing="1" class="tctable">
+								<tbody>
+									<tr>
+										<th width="14%">成品尺寸：</th>
+										<td width="36%">大16开(210*285)</td>
+										<th width="14%">印刷颜色：</th>
+										<td width="36%">四色印刷</td>
+									</tr>
+
+									<tr>
+										<th>封面P数：</th>
+										<td>封面4P</td>
+										<th>内页P数：</th>
+										<td>内页4P</td>
+									</tr>
+
+									<tr>
+										<th>封面纸张：</th>
+										<td>铜版纸 250G</td>
+										<th>内页纸张：</th>
+										<td>铜版纸 157G</td>
+									</tr>
+
+									<tr>
+										<th>装订方式：</th>
+										<td colspan="3">骑马订</td>
+									</tr>
+									<tr>
+										<th>印后加工：</th>
+										<td colspan="3"></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<th>发货方式：</th>
+						<td colspan="5">送货上门</td>
+					</tr>
+					<tr>
+						<th>印刷总价格：</th>
+						<td colspan="5">普通会员 <strong>920</strong><b
+							style="color: #000;"> 元</b> <br> <span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="mxopate notprint">
+				<input type="button" class="mybutton" id="Submit3" value="打印报价单"
+					onclick="window.print();"> <input type="submit"
+					name="btn_SaveQuote" value="保存报价单" id="btn_SaveQuote"
+					class="mybutton"> <input type="submit"
+						name="btn_CreateOrder" value="生成订单" id="btn_CreateOrder"
+						class="mybutton">
+			</div>
+		</div>
+
+	</form>
+
+</body>
+</html>
+<script type="text/javascript" src="/eas/scripts/print/autoPrice.js"></script>

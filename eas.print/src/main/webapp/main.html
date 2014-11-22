@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/portal/default/index.css">
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/jqeasyui14/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="/eas/themes/jqeasyui14/icon.css">
+<script type="text/javascript"
+	src="/eas/scripts/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript"
+	src="/eas/scripts/jqeasyui14/jquery.easyui.min.js"></script>
+<script type="text/javascript"
+	src="/eas/scripts/jqeasyui14/locale/easyui-lang-zh_CN.js"></script>
+	
+<link href="css/nav.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="css/common.js"></script>
+<script language="javascript" src="css/nav.js"></script>	
+
+<script language="javascript" >
+  $(document).ready(function(){	
+	$("#menuNav").height($("#menuNav").height()-$("h2").height() -20);	
+     $("div.circularDiv").height($("#menuNav").height());    
+	});
+</script>
+
+<title>资源视图</title>
+<style type="text/css">
+a {
+	text-decoration: none
+}
+
+a:hover {
+	color: #FF0000;
+	text-decoration: none
+}
+
+html, body {
+	margin: 0px;
+	height: 100%;
+}
+
+.circularDiv {	
+	border: 2px solid #E1E1E1;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 20px;
+	float: right;
+	position: relative;	
+	margin-left: -10px;
+	margin-top: 10px;
+	width:1644px;
+}
+</style>
+</head>
+<!-- 设置了class就可在进入页面加载layout -->
+<body ><div style="width:1900px;height:100%">
+	<div class="menuNav" id= "menuNav" style="border-right-width: 0px">
+		<h2>印刷管理</h2>
+		<div class="navlist" id="SNmenuNav" style="border-right-width: 0px">
+			<dl>
+				<dt class="icon03">
+					<a href="javascript:addTab('tabId_ybbj','样本报价','/eas/pages/print/ybbj.html');">样本报价</a>
+				</dt>			
+			</dl>
+			<dl>
+				<dt class="icon04">
+					<a href="javascript:addTab('tabId_ybbj','样本报价','/eas/pages/print/ybbj.html');">单页报价</a>
+				</dt>		
+			</dl>
+			<dl>
+				<dt class="icon05">
+					<a href="javascript:addTab('tabId_ybbj','样本报价','/eas/pages/print/ybbj.html');">封套报价</a>
+				</dt>				
+			</dl>
+			<dl>
+				<dt class="icon06">
+					<a href="javascript:addTab('tabId_ybbj','样本报价','/eas/pages/print/ybbj.html');">台历报价</a>
+				</dt>				
+			</dl>
+			<dl>
+				<dt class="icon07">
+					<a href="javascript:addTab('tabId_ybbj','样本报价','/eas/pages/print/ybbj.html');">海报报价</a>
+				</dt>				
+			</dl>
+		</div>
+	</div>
+	<div title="功能区"  class="circularDiv" >
+	   <div style="width:1644px;">		
+	      <div style="float:right";><h2  style="float:right; font-family:'微软雅黑';">智能机器人小山很高兴为你服务</h2><img alt="" src="css/client.jpg" style="float:right; margin-top: -2px;"></div>
+			
+	   </div>
+		<div class="easyui-tabs" id="centerTab" fit="true" border="false">
+			
+		</div>
+    </div>
+</div>
+	<!-- 正左边panel -->	
+	<!-- <div region="west" title=""  split="true"
+		style="width: 200px; overflow: hidden;" class="circularDiv">
+		<div class="menuNav" id= "menuNav">
+		<h2>商品分类</h2>
+		<div class="navlist" id="SNmenuNav">
+			<dl>
+				<dt class="icon03">
+					<a href="javascript:addTab('tabId_ybbj','样本报价','/eas/pages/print/ybbj.html');">样本报价</a>
+				</dt>
+				<dd class="menv03">
+					<div class="sideleft">
+						<a href="#">八宝粥+饼干</a>|<a href="#">方便面 + 泡面拍档</a>|<a href="#">小吃+零食</a>|
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="easyui-accordion" fit="true" border="true">	
+			<div title="印刷管理" selected="true">
+				<ul>
+					<li><a
+						href="javascript:addTab('tabId_ybbj','样本报价','/eas/pages/print/ybbj.html');">样本报价</a> </li>
+					<li><a
+						href="javascript:addTab('tabId_dybj','单页报价','/eas/pages/print/dybj.html');">单页报价</a></li>
+					<li><a
+						href="javascript:addTab('tabId_ftbj','封套报价','/eas/pages/print/ftbj.html');">封套报价</a></li>
+				</ul>
+			</div>
+			<div title="爬行管理">
+				<ul>
+					<li><a
+						href="javascript:addTab('tabId_baseUrl','爬行URL管理','/eas/pages/nutch/baseurl.jsp');">爬行URL管理</a></li>
+					<li><a
+						href="javascript:addTab('tabId_crawlRule','爬行规则配置','/eas/pages/nutch/crawlrule.jsp');">爬行规则配置</a></li>
+					<li><a
+						href="javascript:addTab('tabId_urlSuffix','URL后缀配置','/eas/pages/nutch/urlsuffix.jsp');">URL后缀配置</a></li>
+					<li><a
+						href="javascript:addTab('tabId_titleType','网页标题分类','/eas/pages/nutch/titletype.jsp');">网页标题分类</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	正中间panel 
+	<div title="功能区"  region="center"  class="circularDiv" >
+		<div class="easyui-tabs" id="centerTab" fit="true" border="false">
+			
+		</div>
+	</div> -->
+</body>
+</html>
+<script type="text/javascript" src="/eas/scripts/main.js"></script>

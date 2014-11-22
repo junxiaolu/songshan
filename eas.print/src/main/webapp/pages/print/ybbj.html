@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>样本报价</title>
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/jqeasyui14/default/easyui.css">
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/jqeasyui14/icon.css">
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/app/print/default/css/base.css">
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/app/print/default/css/print.css">
+<script type="text/javascript"
+	src="/eas/scripts/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript"
+	src="/eas/scripts/jqeasyui14/jquery.easyui.min.js"></script>
+<script type="text/javascript"
+	src="/eas/scripts/jqeasyui14/locale/easyui-lang-zh_CN.js"></script>
+<link rel="stylesheet"
+	href="/eas/themes/jqeasyui14/default/tooltip.css"></link>
+</head>
+
+<body>
+	<div class="protype">
+			<h1 class="onep ct1">样本报价</h1>
+			<div id="proinfo">
+				<table width="100%" cellpadding="0" cellspacing="1" class="pricebox">
+					<tbody>
+						<tr>
+							<th width="120">尺寸</th>
+							<th width="90">P数</th>
+							<th width="170">封面纸张</th>
+							<th width="170">内页纸张</th>
+							<th width="100">数量(本)</th>
+						</tr>
+						<tr>
+							<td><select name="size" id="size" class="easyui-combobox">
+									<option value="8">大8开(420*285)</option>
+									<option value="12">大12开(285*285)</option>
+									<option value="16" selected="">大16开(210*285)</option>
+									<option value="20">大20开(210*210)</option>
+									<option value="32">大32开(140*210)</option>
+									<option value="8">正8开(370*260)</option>
+									<option value="12">正12开(250*250)</option>
+									<option value="16">正16开(260*185)</option>
+									<option value="20">正20开(185*185)</option>
+									<option value="32">正32开(185*125)</option>
+
+									<option value="8">大8开(285*420)横开本</option>
+									<option value="16">大16开(210*285)横开本</option>
+									<option value="32">大32开(140*210)横开本</option>
+									<option value="8">正8开(260*370)横开本</option>
+									<option value="16">正16开(185*260)横开本</option>
+									<option value="32">正32开(125*185)横开本</option>
+									<option value="16">A4(210*297)</option>
+
+							</select></td>
+							<td><input id="pages" name="pages" type="text"  class="easyui-numberbox" precision="0" value="12"
+								style="width: 52px; height: 18px;"></input></td>
+
+							<td><select name="coverPaper" id="coverPaper" class="easyui-combobox"
+								size="1" style="width: 90px;" valueField="id" textField="text" 
+								panelHeight="auto"></select> <select id="coverPaperWeight"
+								name="coverPaperWeight" class="easyui-combobox" style="width: 60px;" valueField="id" textField="text" 
+								panelHeight="auto"></select></td>
+
+							<td><select id="insidePaper" name="insidePaper" class="easyui-combobox"
+								size="1" style="width: 90px;" valueField="id" textField="text" 
+								panelHeight="auto"></select> <select id="insidePaperWeight"
+								name="insidePaperWeight" class="easyui-combobox" style="width: 60px;" valueField="id" textField="text" 
+								panelHeight="auto"></select></td>
+
+
+
+							<td><input id="quantity" name="quantity" type="text" class="easyui-numberbox" precision="0"  value="100"
+								style="width: 62px; height: 18px;"></input></td>
+						</tr>
+						<tr>
+							<th colspan="6">后道工序加工</th>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<dl>
+									<dt>
+										<input id="isHorseRidingNail" name="isHorseRidingNail" type="checkbox">骑马钉
+									</dt>
+								</dl>
+								<dl>
+									<dt>
+										<input id="isCoverLaminate" name="isCoverLaminate" type="checkbox">封面覆膜
+									</dt>
+								</dl>
+								<dl>
+									<dt>
+										<input id="isAdhesiveBinding" name="isAdhesiveBinding" type="checkbox">胶装
+									</dt>
+								</dl>
+								<dl>
+									<dt>
+										<input name="isCoverUV" type="checkbox" id="isCoverUV">封面UV
+									</dt>
+								</dl>
+								<dl>
+									<dt>
+										<input name="isCoverBronzing" type="checkbox" id="isCoverBronzing">
+										封面烫金
+									</dt>
+								</dl>
+							</td>
+						</tr>	
+						<tr>
+							<th colspan="6">交货方式</th>
+						</tr>	
+						<tr>
+							<td colspan="6">
+								<dl>
+									<dt>
+										<input id="mail_songshan" name="mail" type="radio" value="松山印务专车接送" checked="checked">松山印务专车接送
+									</dt>
+							  	</dl>
+							  	<dl>
+									<dt>
+										<input id="mail_Logistics" name="mail" type="radio" value="物流配送送">物流配送送
+									</dt>
+							  	</dl>
+							  	<dl>
+									<dt>
+										<input id="mail_self" name="mail" type="radio" value="上门自提">上门自提
+									</dt>
+							  	</dl>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="6">发票</th>
+						</tr>	
+						<tr>
+							<td colspan="6">
+								<dl>
+									<dt>
+										<input id="bill_need" name="bill_need" type="checkbox">需要
+									</dt>
+							  	</dl>
+							  	<dl>
+									<dt>
+										<input id="bill_nneed" name="bill_nneed" type="checkbox">不需要
+									</dt>
+							  	</dl>
+							</td>
+							
+						</tr>				
+											
+					</tbody>
+				</table>
+			</div>
+
+			<div class="mxopate" style="float:right">
+				<input id="autoPrice" name="autoPrice" type="button" class="mybutton"
+					value="自动报价">
+
+			</div>
+			<div id="autoPriceList" class="ppricelist" style="width: 99%; display:none;">
+			<h1 class="ct1" >＊样本报价单＊</h1>
+			<table width="94%" cellpadding="0" cellspacing="1" class="pricebox">
+				<tbody>
+					<tr>
+						<th width="13%">印品类型：</th>
+						<th width="20%" style="text-align: left; padding-left: 5px;">样本印刷</th>
+						<th width="13%">印刷数量：</th>
+						<th width="20%" style="text-align: left; padding-left: 5px;" id="priceQuantity">
+							</th>
+						<th width="13%">报价时间：</th>
+						<th width="20%" style="text-align: left; padding-left: 5px" id="priceTime">
+							</th>
+					</tr>
+					<tr>
+						<th align="right">工艺要求：</th>
+						<td colspan="5">
+							<table width="100%" cellspacing="1" class="tctable">
+								<tbody>
+									<tr>
+										<th width="14%">尺寸：</th>
+										<td width="36%" id="priceSize"></td>
+										<th width="14%">P数：</th>
+										<td width="36%" id="pricePages"></td>
+									</tr>
+
+									<tr>
+										<th>封面纸张：</th>
+										<td id="priceCoverPaper"></td>
+										<th>内页纸张：</th>
+										<td id="priceInsidePaper"></td>
+									</tr>
+
+									<tr>
+										<th>后道工序加工：</th>
+										<td  colspan="3" id="priceProcess"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<th>发货方式：</th>
+						<td colspan="5"  align="left"><div id="mail_result" style="float:left;margin-left: 10px"></div></td>
+					</tr>
+					<tr>
+						<th>发票抬头：</th>
+						<td colspan="5"  align="left"><div id="bill_result" style="float:left;margin-left: 10px"></div></td>
+					</tr>
+					<tr>
+						<th>印刷总价格（元）：</th>
+						<td colspan="5"><strong><div id="totalPrice"></div></strong></td>
+					</tr>
+					<tr>
+						<td colspan="6" align="left" style="height: 90px">	
+							<img alt="" src="../../css/note.jpg" style="float:left; margin-top: -2px;">	
+							<div style="float:right;margin-right: 20px;width: 200px;font-size: 150%"><input id="bill_result" name="bill_result" type="radio" value="物流配送送"  >打印报价单</input></div>
+						</td>
+						
+					</tr>	
+						<td colspan="6" align="left" style="height: 35px">	
+							<img alt="" src="../../css/connection.jpg" style="float:left;">								
+						</td>
+						
+					</tr>
+						
+					<tr>	
+						<td colspan="6" align="left" style="height: 35px">	
+						<div class="mxopate notprint" >
+							<input type="button" class="mybutton" id="Submit3" value="打印报价单"	onclick="window.print();" style="float: right;">	</div>					
+						</td>
+						
+					</tr>
+				</tbody>
+			</table>
+			
+				
+			
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="/eas/scripts/print/ybbj.js"></script>

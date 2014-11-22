@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>样本报价</title>
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/jqeasyui14/default/easyui.css">
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/jqeasyui14/icon.css">
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/app/print/default/css/base.css">
+<link rel="stylesheet" type="text/css"
+	href="/eas/themes/app/print/default/css/print.css">
+<script type="text/javascript"
+	src="/eas/scripts/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript"
+	src="/eas/scripts/jqeasyui14/jquery.easyui.min.js"></script>
+<script type="text/javascript"
+	src="/eas/scripts/jqeasyui14/locale/easyui-lang-zh_CN.js"></script>
+<link rel="stylesheet"
+	href="/eas/themes/jqeasyui14/default/tooltip-form-style.css"></link>
+</head>
+
+<body>
+	<div class="protype">
+		<form id="form1" method="post"
+			action="/eas/pages/print/autoPrice.html" target="autoPriceIframe">
+			<h1 class="onep ct1">样本报价</h1>
+			<div id="proinfo">
+				<table width="100%" cellpadding="0" cellspacing="1" class="pricebox">
+					<tbody>
+						<tr>
+							<th width="120">成品尺寸(mm)</th>
+							<th width="90">封面P数</th>
+							<th width="170">封面纸张</th>
+							<th width="90">内页P数</th>
+							<th width="170">内页纸张</th>
+							<th width="100">印刷数量(本)</th>
+						</tr>
+						<tr>
+							<td><select name="size" id="size"
+								onchange="this.nextSibling.value=this.options[selectedIndex].innerHTML;">
+									<option value="D8">大8开(420*285)</option>
+									<option value="D12">大12开(285*285)</option>
+									<option value="D16" selected="">大16开(210*285)</option>
+									<option value="D20">大20开(210*210)</option>
+									<option value="D32">大32开(140*210)</option>
+									<option value="Z8">正8开(370*260)</option>
+									<option value="Z12">正12开(250*250)</option>
+									<option value="Z16">正16开(260*185)</option>
+									<option value="Z20">正20开(185*185)</option>
+									<option value="Z32">正32开(185*125)</option>
+
+									<option value="D8">大8开(285*420)横开本</option>
+									<option value="D16">大16开(210*285)横开本</option>
+									<option value="D32">大32开(140*210)横开本</option>
+									<option value="Z8">正8开(260*370)横开本</option>
+									<option value="Z16">正16开(185*260)横开本</option>
+									<option value="Z32">正32开(125*185)横开本</option>
+									<option value="D16">A4(210*297)</option>
+
+							</select><input type="hidden" id="sizehide" name="sizehide"
+								value="大16开(210*285)"></td>
+							<td><select disabled=""
+								style="position: absolute; width: 52px; clip: rect(auto, auto, auto, 32px); margin-top: 3px; height: 21px;"><option></option>
+									<option value="4">4</option>
+									<option value="8">8</option>
+									<option value="12">12</option>
+									<option value="16">16</option>
+									<option value="20">20</option>
+									<option value="24">24</option>
+									<option value="28">28</option>
+									<option value="32">32</option>
+									<option value="36">36</option>
+									<option value="40">40</option>
+									<option value="44">44</option>
+									<option value="48">48</option>
+									<option value="52">52</option>
+									<option value="56">56</option>
+									<option value="60">60</option>
+									<option value="64">64</option>
+									<option value="68">68</option>
+									<option value="72">72</option>
+									<option value="76">76</option>
+									<option value="80">80</option>
+									<option value="84">84</option>
+									<option value="88">88</option>
+									<option value="92">92</option>
+									<option value="96">96</option>
+									<option value="100">100</option></select><input readonly="readonly"
+								id="fmyeshu" noselect="1" name="fmyeshu" type="text"
+								class="combobox"
+								items="4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100"
+								value="4" style="width: 30px;"> <span
+								style="padding-left: 20px;">P</span></td>
+
+							<td><select name="BigClassNamefm" id="BigClassNamefm"
+								size="1" style="width: 90px;"><option value="双胶纸">双胶纸</option>
+									<option value="铜版（特级）">铜版（特级）</option>
+									<option value="铜版纸" selected="">铜版纸</option>
+									<option value="哑粉（特级）">哑粉（特级）</option>
+									<option value="哑粉纸">哑粉纸</option></select> <select id="BigClassWeightfm"
+								name="BigClassWeightfm"
+								onchange="this.nextSibling.value=this.value;"><option
+										value="" selected="">克重</option>
+									<option value="21">80</option>
+									<option value="22">105</option>
+									<option value="23">128</option>
+									<option value="24">157</option>
+									<option value="25">200</option>
+									<option value="26" selected="">250</option>
+									<option value="27">300</option></select><input type="hidden"
+								name="fm_papers" id="fm_papers" value="26"></td>
+
+							<td><select
+								style="position: absolute; width: 52px; clip: rect(auto, auto, auto, 32px); margin-top: 3px; height: 21px;"><option></option>
+									<option value="4">4</option>
+									<option value="8">8</option>
+									<option value="12">12</option>
+									<option value="16">16</option>
+									<option value="20">20</option>
+									<option value="24">24</option>
+									<option value="28">28</option>
+									<option value="32">32</option>
+									<option value="36">36</option>
+									<option value="40">40</option>
+									<option value="44">44</option>
+									<option value="48">48</option>
+									<option value="52">52</option>
+									<option value="56">56</option>
+									<option value="60">60</option>
+									<option value="64">64</option>
+									<option value="68">68</option>
+									<option value="72">72</option>
+									<option value="76">76</option>
+									<option value="80">80</option>
+									<option value="84">84</option>
+									<option value="88">88</option>
+									<option value="92">92</option>
+									<option value="96">96</option>
+									<option value="100">100</option></select><input id="nyyeshu"
+								name="nyyeshu" type="text" class="combobox"
+								items="4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100"
+								value="4" style="width: 30px;"> <span
+								style="padding-left: 20px;">P</span></td>
+
+							<td><select id="BigClassNameny" name="BigClassNameny"
+								size="1" style="width: 90px;"><option value="双胶纸">双胶纸</option>
+									<option value="铜版（特级）">铜版（特级）</option>
+									<option value="铜版纸" selected="">铜版纸</option>
+									<option value="哑粉（特级）">哑粉（特级）</option>
+									<option value="哑粉纸">哑粉纸</option></select> <select id="BigClassWeightny"
+								name="BigClassWeightny"
+								onchange="this.nextSibling.value=this.value;"><option
+										value="" selected="">克重</option>
+									<option value="21">80</option>
+									<option value="22">105</option>
+									<option value="23">128</option>
+									<option value="24" selected="">157</option>
+									<option value="25">200</option>
+									<option value="26">250</option>
+									<option value="27">300</option></select><input type="hidden"
+								name="ny_papers" id="ny_papers" value="24"></td>
+
+
+
+							<td><select
+								style="position: absolute; width: 62px; clip: rect(auto, auto, auto, 42px); margin-top: 3px; height: 21px;"><option></option>
+									<option value="100">100</option>
+									<option value="200">200</option>
+									<option value="300">300</option>
+									<option value="400">400</option>
+									<option value="500">500</option>
+									<option value="600">600</option>
+									<option value="700">700</option>
+									<option value="800">800</option>
+									<option value="900">900</option>
+									<option value="1000">1000</option>
+									<option value="1500">1500</option>
+									<option value="2000">2000</option>
+									<option value="2500">2500</option>
+									<option value="3000">3000</option>
+									<option value="4000">4000</option>
+									<option value="5000">5000</option>
+									<option value="6000">6000</option>
+									<option value="7000">7000</option>
+									<option value="8000">8000</option>
+									<option value="9000">9000</option>
+									<option value="10000">10000</option>
+									<option value="15000">15000</option>
+									<option value="20000">20000</option>
+									<option value="25000">25000</option>
+									<option value="30000">30000</option>
+									<option value="35000">35000</option>
+									<option value="40000">40000</option>
+									<option value="45000">45000</option>
+									<option value="50000">50000</option></select><input id="fenshu"
+								name="fenshu" type="text" class="combobox"
+								items="100,200,300,400,500,600,700,800,900,1000,1500,2000,2500,3000,4000,5000,6000,7000,8000,9000,10000,15000,20000,25000,30000,35000,40000,45000,50000"
+								value="1000" style="width: 40px;"> <span
+								style="padding-left: 20px;">本</span></td>
+						</tr>
+						<tr>
+							<th colspan="6">后道工序加工</th>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<dl class="threep">
+									<dt>
+										<input id="fmfm" name="fmfm" type="checkbox" value="1">封面覆膜
+										<span> <select name="fmlx" id="fmlx"
+											style="display: none">
+												<option value="光膜">光膜</option>
+												<option value="哑膜">哑膜</option>
+										</select>
+										</span>
+									</dt>
+								</dl>
+								<dl class="threep">
+									<dt>
+										<input id="fmyw" name="fmyw" type="checkbox" value="1">封面压纹
+									</dt>
+								</dl>
+								<dl class="threep">
+									<dt>
+										<input id="fmjbuv" name="fmjbuv" type="checkbox" value="1">封面局部UV
+									</dt>
+								</dl>
+								<dl>
+									<dt>
+										<input name="fmtj" type="checkbox" value="1" id="fmtj">封面烫金
+									</dt>
+									<dd style="display: none;">
+										<li><input type="text" name="tj_width" id="tj_width"
+											size="5">X<input type="text" name="tj_height"
+											id="tj_height" size="5">mm <a href="javascript:;"
+											onclick="AddItem(this,&#39;tj&#39;);">[新增]</a></li>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<input name="fmat" type="checkbox" value="1" id="fmat">
+										封面凹凸
+									</dt>
+									<dd style="display: none;">
+										<li><input type="text" name="at_width" id="at_width"
+											size="5">X<input type="text" name="at_height"
+											id="at_height" size="5">mm <a href="javascript:;"
+											onclick="AddItem(this,&#39;at&#39;);">[新增]</a></li>
+									</dd>
+								</dl>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="3">装订方式</th>
+							<th colspan="3">配送方式（特殊地区运费另议）</th>
+						</tr>
+						<tr>
+
+							<td colspan="3"><input type="radio" name="binding"
+								id="binding" value="骑马订" checked="checked">骑马订 <input
+								type="radio" name="binding" value="无线胶装" id="binding">无线胶装
+								<input type="radio" name="binding" value="有线胶装" id="binding">有线胶装
+							</td>
+							<td colspan="3"><span style="display: none;"> <select
+									id="province" name="province">
+								</select> 省 <select id="city" name="city">
+								</select> 市（区）
+							</span> <input type="radio" name="delivery" value="送货上门"
+								checked="checked">送货上门 <input type="radio"
+								name="delivery" value="预约自提">预约自提</td>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="mxopate">
+				<input id="ZDBJ" name="ZDBJ" type="submit" class="ilbtn1"
+					value="自动报价">
+
+			</div>
+			<iframe id="autoPriceIframe" name="autoPriceIframe"
+				frameborder="0" width="100%" height="0"></iframe>
+
+			<div class="ppricelist">
+				<img src="/eas/themes/app/print/default/images/orderstep.gif">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="/eas/scripts/print/ybbj.js"></script>
